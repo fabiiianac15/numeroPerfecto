@@ -1,35 +1,36 @@
 package com.mycompany.mavenproject1;
 
-import java.util.Scanner;
-
-/**
- *
- * @author SCIS3-10
- */
 public class Mavenproject1 {
 
     public static void main(String[] args) {
-        long startTime = System.nanoTime();
-        int number = 4;
-        int count = 0;
 
-        for (int i = 1; i < number; i++) {
+        System.out.println("Ingrese el número:");
+        int numero = 1;
+        long inicio = System.nanoTime();
 
-            if (number % i == 0) {
+        if (numero <= 0) {
+            System.out.println("El número debe ser positivo.");
+            return;
+        }
 
-                count = i + count;
-
+        int sumaDivisores = 0;
+        for (int i = 1; i <= numero / 2; i++) {
+            if (numero % i == 0) {
+                sumaDivisores += i;
             }
-
         }
 
-        if (count == number) {
-            System.out.println("El numero" + number + "es perfecto");
-
+        if (sumaDivisores == numero) {
+            System.out.println("El número " + numero + " es un número perfecto.");
+        } else {
+            System.out.println("El número " + numero + " no es un número perfecto.");
         }
 
-        long endTime = System.nanoTime() - startTime;
-        System.out.println("El tiempo " + endTime);
+        long fin = System.nanoTime();
 
+        long tiempo = (fin - inicio);
+
+        System.out.println("Tiempo de ejecución: " + tiempo + " nanosegundos");
     }
+
 }
