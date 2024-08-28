@@ -4,7 +4,6 @@ public class Mavenproject1 {
 
     public static void main(String[] args) {
 
-        System.out.println("Ingrese el número:");
         int numero = 1;
         long inicio = System.nanoTime();
 
